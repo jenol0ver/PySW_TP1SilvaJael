@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="clases.css">
+</head>
+<body>
+    <header>
+        <div class="logo">✨ AURAFIT</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li class="has-mega-menu">
+                    <a href="#">Explorar</a>
+                    <div class="mega-menu">
+                        <div class="column">
+                            <a href="#">Clases</a>
+                            <a href="#">Precios</a>
+                            <a href="#">Entrenadores</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Banner de clases -->
+        <section class="banner-clases">
+            <div class="banner-content">
+                <h1>Nuestras Clases</h1>
+                <p>Descubrí una amplia variedad de actividades para todos los niveles</p>
+            </div>
+        </section>
+
+        <!-- Filtros de categorías -->
+         <section class="clases-section">
+        
+            
+            <input type="radio" name="categoria" id="todas" checked>
+            <input type="radio" name="categoria" id="musculacion">
+            <input type="radio" name="categoria" id="crossfit">
+            <input type="radio" name="categoria" id="yoga">
+            <input type="radio" name="categoria" id="pilates">
+            <section class="filtros-container">
+                <h2>Explorá nuestras clases</h2>
+            <!-- los botones -->
+            <div class="filtros">
+                <label for="todas" class="filtro-btn">Todas</label>
+                <label for="musculacion" class="filtro-btn">Musculación</label>
+                <label for="crossfit" class="filtro-btn">CrossFit</label>
+                <label for="yoga" class="filtro-btn">Yoga</label>
+                <label for="pilates" class="filtro-btn">Pilates</label>
+            </div>   
+        </section>
+
+        <!-- Galería de clases tipo masonry -->
+        <div class="galeria-clases">
+            <!-- Musculación -->
+            <div class="clase-item musculacion">
+                <img src="assets/img/musculacion1.jpg" alt="Clase de musculación">
+                <div class="clase-info">
+                    <h3>Entrenamiento de Fuerza</h3>
+                    <p>Desarrollá tu fuerza y resistencia muscular</p>
+                    <span class="categoria-tag">Musculación</span>
+                </div>
+            </div>
+            
+            <div class="clase-item musculacion">
+                <img src="assets/img/musculacion2.jpg" alt="Clase de musculación avanzada">
+                <div class="clase-info">
+                    <h3>Hipertrofia</h3>
+                    <p>Enfocado en el crecimiento muscular</p>
+                    <span class="categoria-tag">Musculación</span>
+                </div>
+            </div>
+            
+            <!-- CrossFit -->
+
+            <div class="clase-item crossfit">
+                <img src="assets/img/crossfit.jpg" alt="Clase de CrossFit">
+                <div class="clase-info">
+                    <h3>CrossFit Básico</h3>
+                    <p>Introducción a los movimientos funcionales</p>
+                    <span class="categoria-tag">CrossFit</span>
+                </div>
+            </div>
+
+            <div class="clase-item crossfit">
+                <img src="assets/img/crossfit1.jpg" alt="Clase de CrossFit">
+                <div class="clase-info">
+                    <h3>CrossFit Básico</h3>
+                    <p>Introducción a los movimientos funcionales</p>
+                    <span class="categoria-tag">CrossFit</span>
+                </div>
+            </div>
+            
+            <div class="clase-item crossfit">
+                <img src="assets/img/crossfit2.jpg" alt="Clase de CrossFit avanzado">
+                <div class="clase-info">
+                    <h3>WOD Challenge</h3>
+                    <p>Desafíos diarios de alta intensidad</p>
+                    <span class="categoria-tag">CrossFit</span>
+                </div>
+            </div>
+            
+            <!-- Yoga -->
+            <div class="clase-item yoga">
+                <img src="assets/img/yoga1.jpg" alt="Clase de Yoga">
+                <div class="clase-info">
+                    <h3>Hatha Yoga</h3>
+                    <p>Posturas clásicas para equilibrar cuerpo y mente</p>
+                    <span class="categoria-tag">Yoga</span>
+                </div>
+            </div>
+            
+            <div class="clase-item yoga">
+                <img src="assets/img/yoga2.jpg" alt="Clase de Yoga avanzado">
+                <div class="clase-info">
+                    <h3>Vinyasa Flow</h3>
+                    <p>Secuencias dinámicas sincronizadas con la respiración</p>
+                    <span class="categoria-tag">Yoga</span>
+                </div>
+            </div>
+            
+            <!-- Spinning -->
+            <div class="clase-item pilates">
+                <img src="assets/img/pilates1.jpg" alt="Clase de Pilates">
+                <div class="clase-info">
+                    <h3>Spinning Endurance</h3>
+                    <p>Mejorá tu resistencia cardiovascular</p>
+                    <span class="categoria-tag">Pilates</span>
+                </div>
+            </div>
+            
+            <div class="clase-item pilates">
+                <img src="assets/img/pilates2.jpg" alt="Clase de Pilates intensivo">
+                <div class="clase-info">
+                    <h3>HIIT Cycling</h3>
+                    <p>Intervalos de alta intensidad en bicicleta</p>
+                    <span class="categoria-tag">Pilates</span>
+                </div>
+            </div>
+
+            <div class="clase-item pilates">
+                <img src="assets/img/pilates.jpg" alt="Clase de Pilates intensivo">
+                <div class="clase-info">
+                    <h3>HIIT Cycling</h3>
+                    <p>Intervalos de alta intensidad en bicicleta</p>
+                    <span class="categoria-tag">Pilates</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tabla de horarios -->
+        <section class="horarios-section">
+            <h2>Horarios Semanales</h2>
+            <div class="horarios-container">
+                <table class="horarios">
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                            <th>Sábado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>06:00 - 07:00</td>
+                            <td>Pilates</td>
+                            <td>Yoga</td>
+                            <td>Pilates</td>
+                            <td>Yoga</td>
+                            <td>Pilates</td>
+                            <td>Yoga</td>
+                        </tr>
+                        <tr>
+                            <td>07:00 - 08:00</td>
+                            <td>Musculación</td>
+                            <td>CrossFit</td>
+                            <td>Musculación</td>
+                            <td>CrossFit</td>
+                            <td>Musculación</td>
+                            <td>CrossFit</td>
+                        </tr>
+                        <tr>
+                            <td>08:00 - 09:00</td>
+                            <td>Yoga</td>
+                            <td>Pilates</td>
+                            <td>Yoga</td>
+                            <td>Pilates</td>
+                            <td>Yoga</td>
+                            <td>Pilates</td>
+                        </tr>
+                        <tr>
+                            <td>18:00 - 19:00</td>
+                            <td>CrossFit</td>
+                            <td>Musculación</td>
+                            <td>CrossFit</td>
+                            <td>Musculación</td>
+                            <td>CrossFit</td>
+                            <td>Musculación</td>
+                        </tr>
+                        <tr>
+                            <td>19:00 - 20:00</td>
+                            <td>Pilates</td>
+                            <td>Yoga</td>
+                            <td>Pilates</td>
+                            <td>Yoga</td>
+                            <td>Pilates</td>
+                            <td>Yoga</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </section>
+    </main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section newsletter">
+        <h3>Suscribíte a nuestro Newsletter</h3>
+        <p>Recibí las últimas novedades y promociones directo en tu email</p>
+        <form class="suscripcion-form">
+          <input type="email" placeholder="Tu email" required>
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+
+      <div class="footer-section redes-sociales">
+        <h3>Seguínos</h3>
+        <div class="redes-container">
+          <a href="#" class="red-social instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="red-social facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="red-social twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="red-social youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section ubicacion">
+        <h3>Ubicación</h3>
+        <div class="mapa-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.643516174904!2d-58.14634228545412!3d-16.50956028204713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e8566d76b22621%3A0x99f09f84f1f8b8c2!2sPlaza%20Principal%20de%20La%20Paz!5e0!3m2!1ses!2sbo!4v1717692957569!5m2!1ses!2sbo"
+            width="100%"
+            height="250"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 AuraFit. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/64d51e4daf.js" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>

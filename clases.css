@@ -1,0 +1,309 @@
+/* Banner de clases */
+.banner-clases {
+  background: linear-gradient(rgba(76, 50, 115, 0.8), rgba(76, 50, 115, 0.8)), url('assets/img/banner-clases.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.banner-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.banner-content p {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+/* Filtros de categorías */
+.filtros-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.filtros-container h2 {
+  text-align: center;
+  color: #4C3273;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  padding: 1.5rem 0;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: none;
+  }  
+
+.filtro-btn {
+  padding: 0.75rem 1.5rem;
+  background: #F7F1F4;
+  color: #4C3273;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  font-size: 1rem;
+}
+
+.filtro-btn:hover {
+  background: #E6D7E3;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filtro-btn:active {
+  transform: translateY(0);
+}
+
+/* Estilo para el botón activo */
+#todas:checked ~ .filtros-container .filtro-btn[for="todas"],
+#musculacion:checked ~ .filtros-container .filtro-btn[for="musculacion"],
+#crossfit:checked ~ .filtros-container .filtro-btn[for="crossfit"],
+#yoga:checked ~ .filtros-container .filtro-btn[for="yoga"],
+#pilates:checked ~ .filtros-container .filtro-btn[for="pilates"] {
+  background: #4C3273;
+  color: #fff;
+  border: 2px solid #7E4AA5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(76, 50, 115, 0.2);
+}
+
+/* Sistema de filtrado con CSS */
+#todas:checked ~ .galeria-clases .clase-item {
+  display: block;
+}
+
+#musculacion:checked ~ .galeria-clases .clase-item:not(.musculacion),
+#crossfit:checked ~ .galeria-clases .clase-item:not(.crossfit),
+#yoga:checked ~ .galeria-clases .clase-item:not(.yoga),
+#pilates:checked ~ .galeria-clases .clase-item:not(.pilates) {
+    display: none;
+}
+
+/* Galería de clases tipo Pinterest */
+.galeria-clases {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 300px;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.clase-item:nth-child(11n+1) {
+    grid-column: span 1;
+}
+
+.clase-item:nth-child(11n+4) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.clase-item:nth-child(11n+6) {
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+.clase-item:nth-child(11n+7) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.clase-item:nth-child(11n+8) {
+    grid-column: span 2;
+    
+}
+      
+
+.clase-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  background: #fff;
+  display: block;
+}
+
+.clase-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.clase-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.clase-item:hover img {
+  transform: scale(1.05);
+}
+
+.clase-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: #fff;
+  padding: 2rem;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.clase-item:hover .clase-info {
+  transform: translateY(-15px);
+}
+
+.clase-info h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.clase-info p {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.categoria-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, #7E4AA5 0%, #4C3273 100%);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(76, 50, 115, 0.2);
+}
+
+/* Estilos para la sección de horarios */
+.horarios-section {
+    padding: 3rem 1rem;
+    background: #F7F1F4;
+    margin: 3rem 0;
+}
+
+.horarios-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4C3273;
+}
+
+.horarios-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 1rem;
+}
+
+/* Estilos base de la tabla */
+.horarios {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.horarios th,
+.horarios td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #E6D7E3;
+    font-size: 0.9rem;
+}
+
+.horarios th {
+    background: #4C3273;
+    color: #fff;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.horarios td {
+    color: #4C3273;
+    font-weight: 500;
+}
+
+/* Colores por tipo de clase */
+.horarios td:nth-child(2n) {
+    background: rgba(126, 74, 165, 0.1);
+}
+
+.horarios td:nth-child(3n) {
+    background: rgba(76, 50, 115, 0.1);
+}
+
+/* Hover effects */
+.horarios tr:hover td {
+    background: rgba(76, 50, 115, 0.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .horarios-container {
+        overflow-x: auto;
+        padding: 0 1rem;
+    }
+
+    .horarios {
+        min-width: 800px;
+    }
+
+    .horarios th,
+    .horarios td {
+        padding: 0.75rem;
+    }
+
+    .horarios th {
+        font-size: 0.8rem;
+    }
+
+    .horarios td {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .horarios-section {
+        padding: 2rem 0.5rem;
+    }
+
+    .horarios {
+        min-width: 600px;
+    }
+
+    .horarios th,
+    .horarios td {
+        padding: 0.5rem;
+    }
+}

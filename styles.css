@@ -306,3 +306,236 @@
     transform: translateY(-5px);
     color: #7E4AA5;
   }
+
+  /* TESTIMONIOS */
+  .testimonios {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #2D1E3F;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .testimonios h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #4C3273;
+  }
+  
+  .carousel {
+    overflow: hidden;
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 320px; /* Ajustado para evitar scroll */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    animation: slide 15s infinite;
+  }  
+  
+  .slide {
+    width: 33.33%;
+    flex-shrink: 0;
+    padding: 2rem;
+    background-color: #F7F1F4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  
+  .slide p {
+    font-size: 1rem;
+    margin: 1rem 0;
+    max-width: 400px;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  .slide h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #7E4AA5;
+    margin: 0.5rem 0;
+  }
+  
+  .slide span {
+    font-size: 0.9rem;
+    color: #7D5FA0;
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #7E4AA5;
+  }
+  
+  @keyframes slide {
+    0%, 25% {
+      transform: translateX(0);
+    }
+    33.33%, 58.33% {
+      transform: translateX(-33.33%);
+    }
+    66.66%, 91.66% {
+      transform: translateX(-66.66%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  /* FOOTER */
+  .footer {
+    background-color: #4C3273;
+    color: #fff;
+    padding: 60px 40px 20px;
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+  }
+
+  .footer-section {
+    padding: 20px;
+  }
+
+  .footer-section h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .footer-section p {
+    color: #ddd;
+    margin-bottom: 20px;
+  }
+
+  /* Formulario de suscripción */
+  .suscripcion-form {
+    display: flex;
+    gap: 10px;
+  }
+
+  .suscripcion-form input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .suscripcion-form button {
+    background-color: #fff;
+    color: #4C3273;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .suscripcion-form button:hover {
+    background-color: #F7F1F4;
+  }
+
+  /* Redes sociales */
+  .redes-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .red-social {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .red-social:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+  }
+
+  .instagram {
+    background-color: #E1306C;
+  }
+
+  .facebook {
+    background-color: #1877F2;
+  }
+
+  .twitter {
+    background-color: #1DA1F2;
+  }
+
+  .youtube {
+    background-color: #FF0000;
+  }
+
+  /* Mapa */
+  .mapa-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Footer bottom */
+  .footer-bottom {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+  }
+
+  .footer-bottom p {
+    color: #ddd;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer {
+      padding: 40px 20px 20px;
+    }
+  
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  
+    .redes-container {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .suscripcion-form {
+      flex-direction: column;
+    }
+  
+    .suscripcion-form input,
+    .suscripcion-form button {
+      width: 100%;
+    }
+  }

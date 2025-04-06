@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F7F1F4;
+    color: #333;
+  }
+  
+  /* HEADER */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #F7F1F4;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 10;
+  }
+  
+  .logo {
+    font-family: "Outfit", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #6d5d9c;
+  }
+  
+  .menu {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+  }
+  
+  .menu a {
+    color: #4C3273;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .menu a:hover {
+    background-color: #4C3273;
+    color: #F7F1F4;
+  }
+  
+  /* Mega Menu */
+  .has-mega-menu {
+    position: relative;
+  }
+  
+  .mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #F7F1F4;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 30px;
+    z-index: 20;
+  }
+  
+  .mega-menu a {
+    color: #555;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .mega-menu a:hover{
+    background-color: #F7F1F4;
+    color: #6D5087;
+    display: block;
+    margin-bottom: 6px;
+  }
+  
+  .has-mega-menu:hover .mega-menu {
+    display: flex;
+  }
+  
+  /* HERO */
+  .hero {
+    position: relative;
+    height: 85vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #a088af00;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero-title {
+    font-family: "outfit", sans-serif;
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: #fffafc;
+  }
+  
+  .fade-word {
+    display: block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: var(--delay);
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #fffafc;
+  }
+  
+  .btn {
+    background-color: #4C3273;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #2D1E3F;
+  }

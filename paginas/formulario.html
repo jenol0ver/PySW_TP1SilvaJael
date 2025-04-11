@@ -18,18 +18,24 @@
     <div class="logo">✨ AURAFIT</div>
     <nav>
       <ul class="menu">
-        <li><a href="home.html">Inicio</a></li>
+        <li><a href="index.html">Inicio</a></li>
         <li class="has-mega-menu">
           <a href="#">Explorar</a>
           <div class="mega-menu">
             <div class="column">
               <a href="clases.html">Clases</a>
-              <a href="#">Precios</a>
+              <a href="precios.html">Precios</a>
               <a href="entrenadores.html">Entrenadores</a>
+              <a href="blog.html">Blog</a>
             </div>
           </div>
         </li>
         <li><a href="formulario.html">Contacto</a></li>
+        <li>
+          <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Alternar modo oscuro">
+            🌙
+          </button>
+        </li>
       </ul>
     </nav>
   </header>
@@ -82,7 +88,7 @@
 
         <div class="form-actions">
           <button type="submit" class="submit-btn">
-            <span class="btn">Enviar mensaje</span>
+            <span class="btn-text">Enviar mensaje</span>
             <div class="spinner"></div>
           </button>
         </div>
@@ -149,5 +155,6 @@
 
   <script src="https://kit.fontawesome.com/64d51e4daf.js" crossorigin="anonymous"></script>
   <script src="formulario.js"></script>
+  <script src="darkmode.js"></script>
 </body>
 </html>

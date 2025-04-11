@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AuraFit</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="formulario.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">✨ AURAFIT</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="home.html">Inicio</a></li>
+        <li class="has-mega-menu">
+          <a href="#">Explorar</a>
+          <div class="mega-menu">
+            <div class="column">
+              <a href="clases.html">Clases</a>
+              <a href="#">Precios</a>
+              <a href="entrenadores.html">Entrenadores</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="formulario.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Banner de contacto -->
+  <section class="banner-contacto">
+    <div class="banner-content">
+        <h1>Nuestro Contacto</h1>
+        <p>Para más información, llená el siguiente formulario o contáctanos al 123456789 o envianos un correo electrónico a info@aurafit.com</p>
+    </div>
+  </section>
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="contact-main">
+    <div class="container">
+      <form id="contactForm" class="contact-form">
+        <div class="form-group">
+          <label for="name">Nombre completo *</label>
+          <input type="text" id="name" name="name" required minlength="3" pattern="[A-Za-z\sñÑáéíóúÁÉÍÓÚ]+" placeholder="Tu nombre completo">
+          <div class="validation-icon"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico *</label>
+          <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="ejemplo@correo.com">
+          <div class="validation-icon"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Teléfono *</label>
+          <input type="tel" id="phone" name="phone" required pattern="[0-9]{9,12}" placeholder="123456789">
+          <div class="validation-icon"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Asunto *</label>
+          <select id="subject" name="subject" required>
+            <option value="">Selecciona un asunto</option>
+            <option value="consulta">Consulta general</option>
+            <option value="clases">Información sobre clases</option>
+            <option value="membresia">Información sobre membresía</option>
+            <option value="otros">Otros</option>
+          </select>
+          <div class="validation-icon"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensaje *</label>
+          <textarea id="message" name="message" required minlength="10" maxlength="500" placeholder="Escribe tu mensaje aquí..."></textarea>
+          <div class="validation-icon"></div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">
+            <span class="btn">Enviar mensaje</span>
+            <div class="spinner"></div>
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Modal de confirmación -->
+  <div id="confirmationModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>¡Mensaje enviado!</h2>
+        <button class="close-btn">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="success-icon">✓</div>
+        <p>Gracias por contactarnos. Nos pondremos en contacto contigo a la brevedad.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section newsletter">
+        <h3>Suscribíte a nuestro Newsletter</h3>
+        <p>Recibí las últimas novedades y promociones directo en tu email</p>
+        <form class="suscripcion-form">
+          <input type="email" placeholder="Tu email" required>
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+
+      <div class="footer-section redes-sociales">
+        <h3>Seguínos</h3>
+        <div class="redes-container">
+          <a href="#" class="red-social instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="red-social facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="red-social twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="red-social youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section ubicacion">
+        <h3>Ubicación</h3>
+        <div class="mapa-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.643516174904!2d-58.14634228545412!3d-16.50956028204713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e8566d76b22621%3A0x99f09f84f1f8b8c2!2sPlaza%20Principal%20de%20La%20Paz!5e0!3m2!1ses!2sbo!4v1717692957569!5m2!1ses!2sbo"
+            width="100%"
+            height="250"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 AuraFit. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/64d51e4daf.js" crossorigin="anonymous"></script>
+  <script src="formulario.js"></script>
+</body>
+</html>

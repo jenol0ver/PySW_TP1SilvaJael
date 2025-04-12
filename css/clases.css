@@ -12,7 +12,7 @@
 
 /* Banner de clases */
 .banner-clases {
-  background: linear-gradient(rgba(76, 50, 115, 0.8), rgba(76, 50, 115, 0.8)), url('assets/img/banner-clases.jpg');
+  background: linear-gradient(rgba(76, 50, 115, 0.8), rgba(76, 50, 115, 0.8)), url('../assets/img/banner-clases.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;

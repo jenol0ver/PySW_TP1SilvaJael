@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - AuraFit</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">✨ AURAFIT</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="has-mega-menu">
+                    <a href="#">Explorar</a>
+                    <div class="mega-menu">
+                        <div class="column">
+                            <a href="clases.html">Clases</a>
+                            <a href="precios.html">Precios</a>
+                            <a href="blog.html">Blog</a>
+                            <a href="entrenadores.html">Entrenadores</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="formulario.html">Contacto</a></li>
+                <li>
+                    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Alternar modo oscuro">
+                      🌙
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Banner de blog -->
+        <section class="banner-blog">
+            <div class="banner-content">
+                <h1>Nuestro Blog</h1>
+                <p>Descubrí novedades y consejos para una vida saludable</p>
+            </div>
+        </section>
+
+        <!-- Filtros -->
+        <section class="filtros-container">
+            <section class="blog-section">
+                <input type="radio" name="categoria" id="todos" checked>
+                <input type="radio" name="categoria" id="entretenimiento">
+                <input type="radio" name="categoria" id="nutricion">
+                <input type="radio" name="categoria" id="bienestar">
+                <input type="radio" name="categoria" id="recetas">
+                <section class="filtros-container">
+                    <h2>Explorá nuestros blogs</h2>
+                <!-- los botones -->
+                <div class="filtros">
+                    <label for="todos" class="filtro-btn">Todo</label>
+                    <label for="entretenimiento" class="filtro-btn">Entrenamiento</label>
+                    <label for="nutricion" class="filtro-btn">Nutrición</label>
+                    <label for="bienestar" class="filtro-btn">Bienestar</label>
+                    <label for="recetas" class="filtro-btn">Recetas</label>
+                </div>   
+                </section>
+
+        <!-- Contenido principal -->
+        <section class="blog-content">
+            <div class="article-grid">
+                <!-- Artículo 2 -->
+                <article class="article-card entrenamiento">
+                    <div class="article-image">
+                        <img src="../assets/img/cardio.jpg" alt="Cardio Intensivo">
+                    </div>
+                    <div class="article-info">
+                        <div class="article-meta">
+                            <span class="category">Entrenamiento</span>
+                            <span class="date">10 Abril 2025</span>
+                        </div>
+                        <h3>Cardio Intensivo: Mejora tu Rendimiento</h3>
+                        <p>Técnicas avanzadas de entrenamiento cardiovascular para optimizar tu rendimiento.</p>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 3 -->
+                <article class="article-card nutricion">
+                    <div class="article-image">
+                        <img src="../assets/img/proteinas.jpg" alt="Proteínas Esenciales">
+                    </div>
+                    <div class="article-info">
+                        <div class="article-meta">
+                            <span class="category">Nutrición</span>
+                            <span class="date">9 Abril 2025</span>
+                        </div>
+                        <h3>Proteínas Esenciales: Tu Guía Definitiva</h3>
+                        <p>Todo lo que necesitas saber sobre las proteínas y su importancia en tu dieta.</p>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 4 -->
+                <article class="article-card wellness">
+                    <div class="article-image">
+                        <img src="../assets/img/meditacion.jpg" alt="Meditación y Bienestar">
+                    </div>
+                    <div class="article-info">
+                        <div class="article-meta">
+                            <span class="category">Bienestar</span>
+                            <span class="date">8 Abril 2025</span>
+                        </div>
+                        <h 3>Meditación y Bienestar: La Conexión Perfecta</h3>
+                        <p>Descubre cómo la meditación puede mejorar tu bienestar físico y mental.</p>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 5 -->
+                <article class="article-card recetas">
+                    <div class="article-image">
+                        <img src="../assets/img/proteina.jpg" alt="Receta de Proteínas">
+                    </div>
+                    <div class="article-info">
+                        <div class="article-meta">
+                            <span class="category">Recetas</span>
+                            <span class="date">7 Abril 2025</span>
+                        </div>
+                        <h3>Receta: Proteínas de Salmón al Horno</h3>
+                        <p>Una receta deliciosa y saludable que te ayudará a alcanzar tus objetivos fitness.</p>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección de Comentarios -->
+        <section class="comments-section">
+            <h2>Comentarios</h2>
+            <div class="comments-container">
+                <!-- Comentario 1 -->
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <div class="avatar-initials">JM</div>
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <span class="comment-author">Juan Martínez</span>
+                            <span class="comment-date">11 Abril 2025</span>
+                        </div>
+                        <p>Excelente artículo sobre cardio intensivo. Los consejos son muy prácticos y fáciles de seguir.</p>
+                    </div>
+                </div>
+
+                <!-- Comentario 2 -->
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <div class="avatar-initials">MC</div>
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <span class="comment-author">María Castro</span>
+                            <span class="comment-date">10 Abril 2025</span>
+                        </div>
+                        <p>Las recetas fitness son geniales. ¡Gracias por compartir!</p>
+                    </div>
+                </div>
+
+                <!-- Formulario de comentario -->
+                <div class="comment-form">
+                    <h3>Deja un comentario</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Escribe tu comentario..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-comment">Enviar Comentario</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section newsletter">
+                <h3>Suscribíte a nuestro Newsletter</h3>
+                <p>Recibí las últimas novedades y promociones directo en tu email</p>
+                <form class="suscripcion-form">
+                    <input type="email" placeholder="Tu email" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+
+            <div class="footer-section redes-sociales">
+                <h3>Seguínos</h3>
+                <div class="redes-container">
+                    <a href="#" class="red-social instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="red-social facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="red-social twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="red-social youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section ubicacion">
+                <h3>Ubicación</h3>
+                <div class="mapa-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.643516174904!2d-58.14634228545412!3d-16.50956028204713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e8566d76b22621%3A0x99f09f84f1f8b8c2!2sPlaza%20Principal%20de%20La%20Paz!5e0!3m2!1ses!2sbo!4v1717692957569!5m2!1ses!2sbo"
+                        width="100%"
+                        height="250"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 AuraFit. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/64d51e4daf.js" crossorigin="anonymous"></script>
+    <script src="../js/darkmode.js"></script>
+</body>
+</html>

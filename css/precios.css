@@ -1,0 +1,226 @@
+:root {
+    --price-bg: #F7F1F4;
+    --card-price-bg: white;
+}
+
+:root.dark-mode {
+    --price-bg: var(--secondary-background-color);
+    --card-price-bg: #2B2340;
+}
+
+/* Banner de precios */
+.banner-precios {
+    background: linear-gradient(rgba(76, 50, 115, 0.8), rgba(76, 50, 115, 0.8)), url('../assets/img/banner-clases.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+  
+.banner-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+  
+.banner-content p {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+/* Sección de precios */
+.pricing-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--primary-background-color);
+}
+
+/* Toggle switch */
+.pricing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    color: var(--text-color);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--tertiary-color);
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--secondary-color);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--tertiary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Contenedor de tarjetas */
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Tarjetas de precios */
+.pricing-card {
+    background: var(--card-price-bg);
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(76, 50, 115, 0.2);
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--tertiary-color);
+    transform: scale(1.05);
+}
+
+.featured-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--tertiary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.pricing-card h3 {
+    color: var(--text-color);
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Precios */
+.price {
+    font-size: 40px;
+    color: #CDA9C3;
+    margin: 20px 0;
+    position: relative;
+    font-weight: 700;
+}
+
+
+/* Toggle de precios */
+#planToggle:checked ~ * .price .monthly {
+    display: none;
+}
+
+#planToggle:checked ~ * .price .annual {
+    display: inline-block;
+}
+
+/* Lista de características */
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.features li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--secondary-background-color);
+    color: var(--text-color);
+    position: relative;
+}
+
+/* Tooltips */
+.tooltip {
+    position: relative;
+    cursor: help;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.tooltip[data-tooltip]:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    background: var(--secondary-color);
+    color: white;
+    font-size: 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.tooltip[data-tooltip]:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 34px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--secondary-color);
+    z-index: 1000;
+}
+
+/* Botón CTA */
+.cta-button {
+    background: var(--tertiary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.cta-button:hover {
+    background: var(--primary-color);
+}
